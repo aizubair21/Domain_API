@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://minithost.com.bd/newstyle.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section id="nav">
+        <div class="nav_navigation">
+
+            <div class="nav_logo">
+                <a href="/">swiftdodo.com</a>
+            </div>
+
+            <div class="nav_list">
+                <a class="nav_list_item" href="/">Domain</a>
+                <a class="nav_list_item" href="/">Email</a>
+                <a class="nav_list_item" href="/">Wordpress</a>
+            </div>
+        </div>
+        <div class="nav_cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="dm_card_total">2450</span>
+        </div>
+    </section>
+
+
+    <div id="ds_main">
+
+        <div class="dm_domain_row">
+            <!-- <div class="dm_domain_row_bg_wrapper"></div> -->
+            <div class="dm_domain sm_section">
+                <div class="dm_domain_title">
+                    <h3>Domain Search Result</h3>
+                    <p>Host your name with the company that cares. Compatible with all hosting companies and email.</p>
+                </div>
+
+                <div class="domain_search">
+                    <div class="www">www. </div>
+                    <input type="text" name="domain_search" id="domain_search" autofocus>
+                    <div onclick="searchHasPresent()" class="magnific_glass">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <div class="domain_bottom_info">
+                    <div class="domain_info_google">
+                        <i class="fa-brands fa-google"></i> Google-Powerd DNS
+                    </div>
+
+                    <div class="domain_info_visible">
+                        <i class="fa-solid fa-rotate"></i> No hidden renewal fees
+                    </div>
+
+                    <div class="domain_info_support">
+                        <i></i> Friendly UK support
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ds_result" class="sm_section">
+
+
+            <div class="dm_result_wrapper">
+
+                <!-- left domain info -->
+                <div class="dm_result_wrapper_div">
+
+
+                    <div class="dm_result_popular">
+
+                    </div>
+                    <div class="dm_result_bundle">
+
+                    </div>
+
+
+                    <div style="background-color: #fff; border-radius: 8px;">
+                        <div>
+
+                            <div class="dm_result_wrapper_head">
+                                More from Suggestion
+                            </div>
+                            <hr style="opacity: .4;">
+                            <!-- dynamicly show result from ajux -->
+                            <div class="ds_result_show">
+                                <div id="ds_result_show">
+                                    <div class="dm_element">
+                                        <!-- left domain info -->
+                                        <div style="display: flex;align-items: center;" class="dm_element_left">
+                                            <!-- <span class="f_spin"></span> -->
+                                            <div class="dm_icon">
+                                                <i class="fa-solid fa-circle-check"></i>
+                                            </div>
+                                            <div style="padding:3px">
+                                                <div class='dm_name'>admin.net</div>
+                                                <div class="availability">
+                                                    Buy Now
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- right price and card btn -->
+                                        <div class="dm_element_right ">
+                                            <div class="dm_price">
+                                                ৳570 TK
+                                            </div>
+                                            <div class="dm_btn addToCard admin.net" data-vat="0" data-name="admin.net"
+                                                data-price="250" onclick="addToCard(this)">
+                                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- right card design -->
+                <div class="dm_card">
+                    <div class="dm_card_head">
+                        <span><i class="fa-solid fa-cart-shopping" style="padding-right:15px"></i>Card</span>
+                        <span class="clear_card" title="Click to clear you card" onclick="clearCard()">Clear</span>
+                    </div>
+                    <hr style="opacity: .4;">
+                    <div class="dm_card_domain_show">
+
+                    </div>
+                    <!-- <hr style="opacity: .4;"> -->
+                    <div class="dm_card_body">
+                        <form action="" method="get">
+                            <table>
+                                <tr>
+                                    <td>Domain :</td>
+                                    <td class="dm_card_item" style="text-align: right;"></td>
+                                    <input type="hidden" name="item" class="dm_card_item_input" name="">
+                                </tr>
+                                <tr>
+                                    <td>Subtotal :</td>
+                                    <td class="dm_card_subtotal" style="text-align: right;"></td>
+                                    <input type="hidden" name="subtotal" class="dm_card_subtotal_input" name="">
+                                </tr>
+                                <tr>
+                                    <td>Vat :</td>
+                                    <td class="dm_card_vat" style="text-align: right;"></td>
+                                    <input type="hidden" name="vat" class="dm_card_vat_input" name="">
+                                </tr>
+                                <tr style="font-weight: 900; padding-top: 18px; border-top: 1px solid #d1d0d0;">
+                                    <td>Total :</td>
+                                    <td class="dm_card_total" style="text-align: right;"></td>
+                                    <input type="hidden" name="total" class="dm_card_total_input" name="">
+                                </tr>
+                            </table>
+
+                            <button type="submit" class="checkout_btn">
+                                checkout & pay <i class="fa-solid fa-check" style="padding-left: 3px;"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="domain_api.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
