@@ -19,6 +19,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
+    z-index: 999;
 
 }
 
@@ -110,6 +111,7 @@
     background-image: url('https://minthost.com.bd/img/domains-hero.jpg');
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 
 }
@@ -217,20 +219,23 @@
 
 #ds_result .dm_result_wrapper .dm_result_popular {
     width: 100%;
-    background: #fff;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     overflow: hidden;
-    ;
-
+    margin-bottom: 15px;
 }
 
 .dm_result_bundle {
-    margin-bottom: 15px;
-    background-color: aquamarine;
-    border-radius: 8px;
+    /* background-color: aquamarine; */
+    /* border-radius: 8px; */
     overflow: hidden;
-    margin-top: 5px;
-    ;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.dm_result_bundle .dm_element:first-child{
+    border-radius: 0px!important;
+}
+.dm_result_bundle .dm_element:last-child{
+    border-radius: 0px!important;
 }
 
 #ds_result .dm_result_wrapper .dm_result_popular .popular_item {
@@ -288,6 +293,10 @@
 #ds_result .dm_result_wrapper .dm_result_wrapper_head {
     padding: 12px;
     font-size: 18px;
+    /* background: linear-gradient(-15deg, #3e8b48, #fff); */
+    background: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 #dm_result .dm_result_wrapper .ds_result_show {
@@ -313,7 +322,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border-bottom: 1px solid rgba(185, 185, 185, 0.842);
+    /* border-bottom: 1px solid rgba(185, 185, 185, 0.842); */
+    margin: 3px 0px;
+    background-color: #fff;
+    /* border-radius: 8px; */
+}
+#ds_result .dm_result_wrapper .dm_element:first-child{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+#ds_result .dm_result_wrapper .dm_element:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #ds_result .dm_result_wrapper .dm_element .dm_icon {}
@@ -480,3 +500,5 @@
     opacity: 1;
     background-color: #3e8b48;
 }
+
+
